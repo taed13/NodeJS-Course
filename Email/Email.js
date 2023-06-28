@@ -6,17 +6,17 @@ var transporter = nodemailer.createTransport({
     service: 'gmail',
     // cung cấp thông tin xác thực để đăng nhập vào tài khoản Gmail của bạn
     auth: {
-        user: '102200296@sv1.dut.udn.vn',
-        pass: '@Yesicandoit2002'
+        user: 'tiendatpot@gmail.com',
+        pass: 'xvfrfvuwepoukwds'
     }
 });
 
 // thiết lập các tuỳ chọn email
 var mailOptions = {
     from: 'tiendatpot@gmail.com',
-    to: 'luongduthichatdoi@gmail.com',
+    to: 'luongduthichatdoi@gmail.com, nonoelep@gmail.com',
     subject: 'Sending Email using Node.js',
-    text: 'That was easy!'
+    html: '<h1>Welcome</h1><p>That was easy!</p>'
 };
 
 // gửi email bằng phương thức sendMail của transporter
