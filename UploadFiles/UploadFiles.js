@@ -1,9 +1,9 @@
 var http = require('http');
-var formidable = require('formidable');
+import { IncomingForm } from 'formidable';
 
 http.createServer(function (req, res) {
     if (req.url == '/fileupload') {
-        var form = new formidable.IncomingForm();
+        var form = new IncomingForm();
         form.parse(req, function (err, fields, files) {
             res.write('File uploaded');
             res.end();
